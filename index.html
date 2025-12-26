@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="flex justify-center">
+        <div id="box" class="w-80 bg-cyan-700 mt-10 rounded-xl">
+            <div id="header" class="text-center h-5 text-orange-300 bg-purple-400 rounded-xl">
+                <h1 class="text-xs">Are you a legend? can you guess my number</h1>
+            </div>
+            <div class="h-8 text-red-300">
+                <p class="text-xs text-center ">We have selected a random number between 1 and 100 . see if you 
+                    can guess it in 10 turns or fewer.we'll tell you if your guess was
+                    too high or too low.
+                </p>
+            </div>
+            <div class="flex justify-center mt-10 item-center">
+                <div class="flex justify-between ">
+                <label class="text-xs h-5 w-20" for="guessfield">Enter a guess:</label>
+                <input type="number" id="guessfield" max="100" min="1" class="h-5 w-20 text-xs outline-none text-center ring-1 ring-yellow-300 rounded-md">
+                </div>
+                <button id="guesssubmit" class="text-xs text-grey-300 bg-red-200 ml-5 h-4 w-20 ring-1 ring-red-300 text-center rounded-md transition duration-1000 hover:text-green-200 hover:bg-purple-400 hover:translate-1">submit guess</button>
+            </div>
+           <div id="resultparas" class="mt-2">
+            <p id="guess" class="text-xs text-red-300 ml-5"></p>
+            <p id="result" class="ml-5"></p>
+            <p id="lowhigh" class="ml-5"></p>
+           </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
